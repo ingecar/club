@@ -52,8 +52,7 @@ export class ClubService {
         'The club with the given id was not found',
         BusinessError.NOT_FOUND,
       );
-    clubToUpdate.id = club.id;
-    return await this.clubRepository.save(clubToUpdate);
+    return await this.clubRepository.save({ ...clubToUpdate, ...club });
   }
 
   async delete(id: string): Promise<void> {

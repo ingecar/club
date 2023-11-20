@@ -51,8 +51,7 @@ export class SocioService {
         'The socio with the given id was not found',
         BusinessError.NOT_FOUND,
       );
-    socioToUpdate.id = socio.id;
-    return await this.socioRepository.save(socioToUpdate);
+    return await this.socioRepository.save({ ...socioToUpdate, ...socio });
   }
 
   async delete(id: string): Promise<void> {
