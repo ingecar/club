@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "7f9632f5-c2a4-476a-8bcd-7bfd42cbbc26",
+		"name": "Club examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20323798"
+	},
+	"item": [
+		{
+			"name": "Club",
+			"item": [
+				{
+					"name": "Get all clubs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/club",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get club by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/club/clubId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club",
+								"clubId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an invalid club",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/club/00000000-0000-0000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club",
+								"00000000-0000-0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a club",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nombre club 1\",\n    \"fundationDate\": \"1910-11-22T00:00:00+00:00\",\n    \"image\": \"url_imagen.com\",\n    \"description\": \"Esta es la descripcion\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/club",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an invalid club",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nombre club 1\",\n    \"fundationDate\": \"1910-11-22T00:00:00+00:00\",\n    \"image\": 23,\n    \"description\": \"Esta es la descripcion \"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/club",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a club",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nombre club Actualizado\",\n    \"fundationDate\": \"2023-11-22T00:00:00+00:00\",\n    \"image\": \"url_imagen.com\",\n    \"description\": \"Esta es la descripcion\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/club/8a24aa44-2819-47a2-9f31-0c84e8d15b05",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club",
+								"8a24aa44-2819-47a2-9f31-0c84e8d15b05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a club",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/club/e07b8239-9cd8-454c-82a5-277ed8650467",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"club",
+								"e07b8239-9cd8-454c-82a5-277ed8650467"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Socio",
+			"item": [
+				{
+					"name": "Get a member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/socio",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a member by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/socio/socioId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio",
+								"socioId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an invalid member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/socio/00000000-0000-0000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio",
+								"00000000-0000-0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usuario1\",\n    \"email\": \"usuario1@usuario.com\",\n    \"birthDate\": \"1910-11-22T00:00:00+00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/socio",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an invalid member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usuario1\",\n    \"email\": \"micorreosinarroba\",\n    \"birthDate\": \"1910-11-22T00:00:00+00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/socio",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a member",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usuarioAct\",\n    \"email\": \"usuario2@usuario.com\",\n    \"birthDate\": \"1910-11-22T00:00:00+00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/socio/d056c6fd-b8d5-4a66-b4f0-f551cfaf184d",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio",
+								"d056c6fd-b8d5-4a66-b4f0-f551cfaf184d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/socio/d056c6fd-b8d5-4a66-b4f0-f551cfaf184d",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"socio",
+								"d056c6fd-b8d5-4a66-b4f0-f551cfaf184d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asociacion",
+			"item": [
+				{
+					"name": "Get all members from a club",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clubes/:clubId/socios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clubes",
+								":clubId",
+								"socios"
+							],
+							"variable": [
+								{
+									"key": "clubId",
+									"value": "b89e89d5-9520-4719-bce3-ac0238e319d8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a member from a club",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clubes/:clubId/socios/:socioId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clubes",
+								":clubId",
+								"socios",
+								":socioId"
+							],
+							"variable": [
+								{
+									"key": "clubId",
+									"value": "41ff76ad-37b8-4ed2-b81c-00bfa39bda0e"
+								},
+								{
+									"key": "socioId",
+									"value": "12300fd5-8324-4376-a632-b308354fb736"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add member to club",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clubes/:clubId/socios/:socioId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clubes",
+								":clubId",
+								"socios",
+								":socioId"
+							],
+							"variable": [
+								{
+									"key": "clubId",
+									"value": "41ff76ad-37b8-4ed2-b81c-00bfa39bda0e"
+								},
+								{
+									"key": "socioId",
+									"value": "12300fd5-8324-4376-a632-b308354fb736"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an invalid member to club",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clubes/:clubId/socios/:socioId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clubes",
+								":clubId",
+								"socios",
+								":socioId"
+							],
+							"variable": [
+								{
+									"key": "clubId",
+									"value": "00000000-0000-0000-0000-000000000000"
+								},
+								{
+									"key": "socioId",
+									"value": "12300fd5-8324-4376-a632-b308354fb736"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete member from a club",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/clubes/:clubId/socios/:socioId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clubes",
+								":clubId",
+								"socios",
+								":socioId"
+							],
+							"variable": [
+								{
+									"key": "clubId",
+									"value": "b89e89d5-9520-4719-bce3-ac0238e319d8"
+								},
+								{
+									"key": "socioId",
+									"value": "5fd59e2d-835d-4478-93e1-d5dbb92989a0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
