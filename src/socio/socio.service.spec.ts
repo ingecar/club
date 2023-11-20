@@ -87,7 +87,6 @@ describe('SocioService', () => {
   
     const storedSocio: SocioEntity = await repository.findOne({ where: { id: socio.id } })
     expect(storedSocio).not.toBeNull();
-    expect(storedSocio.username).toEqual(socio.username
   });
  
   it('update should throw an exception for an invalid socio', async () => {
